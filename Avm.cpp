@@ -17,6 +17,7 @@ Avm::Avm() {}
 Avm::Avm(std::string file_name) : _fileName(file_name), _myData()
 {
 	read_data();
+	_myData.shrink_to_fit();
 	show_data();
 }
 
