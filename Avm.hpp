@@ -18,6 +18,20 @@
 # include <fstream>
 # include <stdexcept>
 
+const int	PUSH = 0;
+const int	POP = 1;
+const int	DUMP = 2;
+const int	ASSERT = 3;
+const int	ADD = 4;
+const int	SUB = 5;
+const int	MUL = 6;
+const int	DIV = 7;
+const int	MOD = 8;
+const int	PRINT = 9;
+const int	EXIT = 10;
+
+enum{hbjb, fgh,dsf};
+
 class Avm
 {
 	public:
