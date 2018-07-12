@@ -1,8 +1,9 @@
+
 NAME = a.out
 
 CC = g++
 
-CFLAGS = -Wall -Wextra -Werror std=c++14
+CFLAGS =  -Wall -Wextra -Werror 
 
 CLASSES = Avm.cpp
 
@@ -10,13 +11,15 @@ FILES = main.cpp $(CLASSES)
 
 OBJS = $(FILES:.cpp=.o)
 
-all: $(NAME)
+# all: $(NAME)
+all:
+	g++ -g -Wall -Wextra -Werror -std=c++14 *cpp
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC)  std=c++14 $(CFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) std=c++14 $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS)
