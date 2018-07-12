@@ -26,8 +26,8 @@ class Avm
 		~Avm();
 
 	private:
-		std::vector<std::string>	_myData;
 		std::string					_fileName;
+		std::vector<std::string>	_myData;
 
 		Avm(Avm const &other);		
 		void		read_data();
